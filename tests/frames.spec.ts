@@ -12,7 +12,7 @@ test("interaction", async ({ page }) => {
 
     //await page.pause();
 
-    const frame1 = await page.frame("firstFr");
+    const frame1 = await page.frame("firstFr"); //locate by name
 
     await frame1?.fill("input[name='fname']", "uros");
     // upitnik znaci if(frame1 != null)
@@ -28,7 +28,7 @@ test("interaction2", async ({ page }) => {
 
     //await page.pause();
 
-    const frame1 = await page.frameLocator('#firstFr');
+    const frame1 = await page.frameLocator('#firstFr'); //locate by id
 
     await frame1?.locator("input[name='fname']").fill("uros");
     // upitnik znaci if(frame1 != null)
@@ -44,7 +44,7 @@ test("nested frame", async ({ page }) => {
 
     await page.pause();
 
-    const frame1 = await page.frameLocator('#firstFr');
+    const frame1 = await page.frameLocator('#firstFr'); //locate by id
     const innerframe1 = await frame1.frameLocator("iframe[src='innerFrame']");
     await innerframe1.locator("input[name='email']").fill("hello");
 })
