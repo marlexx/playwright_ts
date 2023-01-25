@@ -18,6 +18,7 @@ test("log windows popup url", async ({ page }) => {
         page.waitForEvent("popup"),
         page.click("#followboth") //id
     ])
+    await multip.waitForLoadState();
     const pages = await multip.context().pages();
 
     console.log("pages: " + pages.length);

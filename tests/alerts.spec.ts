@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
 
 test('alert1', async ({ page }) => {
-
     await page.goto("https://www.lambdatest.com/selenium-playground/");
 
     await page.locator("text = Javascript Alerts").click();
@@ -13,7 +12,6 @@ test('alert1', async ({ page }) => {
     })
 
     await page.locator('button:has-text("Click Me")').nth(0).click();
-
    
 })
 

@@ -42,7 +42,7 @@ test("interaction2", async ({ page }) => {
 test("nested frame", async ({ page }) => {
     await page.goto("https://letcode.in/frame");
 
-    await page.pause();
+    //await page.pause();
 
     const frame1 = await page.frameLocator('#firstFr'); //locate by id
     const innerframe1 = await frame1.frameLocator("iframe[src='innerFrame']");
