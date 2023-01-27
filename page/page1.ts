@@ -4,7 +4,7 @@ export default class page1 {
     button: Locator;
 
     constructor(public page: Page) { 
-     this.button = page.getByRole('button', { name: 'Get Checked value' });
+     this.button = page.getByRole('button', { name: 'Get Checked value' }); //ovde imenujes objekte
     }
 
     async EnterValue(value: string) {
